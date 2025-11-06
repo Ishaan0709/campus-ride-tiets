@@ -104,13 +104,13 @@ export default function AdminDashboard() {
   const avgFillRate = pools.length > 0 ? (pools.reduce((acc, p) => acc + p.studentIds.length, 0) / (pools.length * 4)) * 100 : 0;
 
   const demoSteps = [
-    { id: 'idle', label: 'Seed Data', action: handleSeed, color: 'bg-muted' },
-    { id: 'seeded', label: 'Create Pools', action: handlePool, color: 'bg-primary' },
-    { id: 'pooled', label: 'Assign Drivers', action: handleAssign, color: 'bg-primary' },
-    { id: 'assigned', label: 'Verify OTPs', action: handleVerifyAll, color: 'bg-warning' },
-    { id: 'verified', label: 'Start Trips', action: handleMove, color: 'bg-success' },
-    { id: 'moving', label: 'In Progress', action: () => {}, color: 'bg-success', disabled: true },
-    { id: 'completed', label: 'Completed', action: () => {}, color: 'bg-muted', disabled: true },
+    { id: 'idle', label: 'Seed Data', action: handleSeed, color: 'bg-gradient-to-r from-red-500 to-red-600' },
+    { id: 'seeded', label: 'Create Pools', action: handlePool, color: 'bg-gradient-to-r from-orange-500 to-orange-600' },
+    { id: 'pooled', label: 'Assign Drivers', action: handleAssign, color: 'bg-gradient-to-r from-yellow-500 to-yellow-600' },
+    { id: 'assigned', label: 'Verify OTPs', action: handleVerifyAll, color: 'bg-gradient-to-r from-green-500 to-green-600' },
+    { id: 'verified', label: 'Start Trips', action: handleMove, color: 'bg-gradient-to-r from-blue-500 to-blue-600' },
+    { id: 'moving', label: 'In Progress', action: () => {}, color: 'bg-gradient-to-r from-indigo-500 to-indigo-600', disabled: true },
+    { id: 'completed', label: 'Completed', action: () => {}, color: 'bg-gradient-to-r from-purple-500 to-purple-600', disabled: true },
   ];
 
   const getCurrentStepIndex = () => {
